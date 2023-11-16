@@ -1,4 +1,6 @@
-CFLAGS=-Wall -Wextra -std=gnu11 -pedantic
+OBJS=jmalloc.o
+CXX=g++
+CXXFLAGS=-Wall -Wextra -std=c++17 -pedantic
 
-jallocator: jmalloc.c
-	$(CC) $(CFLAGS) -o jallocator jmalloc.c
+jallocator: $(OBJS)
+	$(CXX) $(CFLAGS) -o $@ $^ $(LIBS)
